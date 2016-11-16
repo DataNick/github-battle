@@ -8,7 +8,9 @@ var hashHistory = ReactRouter.hashHistory;
 
 var Main = require('../components/Main');
 var Home = require('../components/Home');
-var promptContainer = require('../containers/promptContainer')
+var promptContainer = require('../containers/promptContainer');
+var ConfirmBattleContainer = require('../containers/ConfirmBattleContainer');
+var parent = require('../components/parent');
 
 var routes = (
   <Router history={hashHistory}>
@@ -16,6 +18,7 @@ var routes = (
       <IndexRoute component={Home}/>
       <Route path='playerOne' header="Player One" component={promptContainer} />
       <Route path='playerTwo/:playerOne' header="Player Two" component={promptContainer} />
+      <Route path='battle' component={ConfirmBattleContainer} />
     </Route>
   </Router>
 );
