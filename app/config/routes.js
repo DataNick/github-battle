@@ -11,6 +11,7 @@ var Home = require('../components/Home');
 var promptContainer = require('../containers/promptContainer');
 var ConfirmBattleContainer = require('../containers/ConfirmBattleContainer');
 var parent = require('../components/parent');
+var ResultsContainer = require('../containers/ResultsContainer');
 
 var routes = (
   <Router history={hashHistory}>
@@ -19,8 +20,9 @@ var routes = (
       <Route path='playerOne' header="Player One" component={promptContainer} />
       <Route path='playerTwo/:playerOne' header="Player Two" component={promptContainer} />
       <Route path='battle' component={ConfirmBattleContainer} />
+      <Route path='results' component={ResultsContainer} />
     </Route>
   </Router>
 );
 
-module.exports = routes
+module.exports = routes;
